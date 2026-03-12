@@ -4,4 +4,4 @@ const handleClick = function(){
     alert('Hello!')
 }
 
-btnEl.onclick = handleClick
+btnEl.addEventListener('click', handleClick)
