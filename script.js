@@ -1,9 +1,7 @@
-const h1El = document.querySelector('h1')
+const h1El = document.querySelector('.input-checked')
 const inputEl = document.querySelector('input')
 
 inputEl.addEventListener('change', function(e){
-    const input = e.target
-    console.log(input.value)
-
-    h1El.innerText = input.value
+    console.log(e.target.checked)
+    h1El.innerText = e.target.checked
 })
