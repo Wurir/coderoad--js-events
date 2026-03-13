@@ -1,7 +1,7 @@
-const btnEl = document.querySelector('button')
+const h1El = document.querySelector('h1')
+const inputEl = document.querySelector('input')
 
-const handleClick = function(){
-    alert('Hello!')
-}
-
-btnEl.addEventListener('click', handleClick)
+inputEl.addEventListener('input', function(e){
+    const input = e.target
+    console.log(input.value)
+})
