@@ -4,12 +4,12 @@ const div3 = document.querySelector('.div-3')
 
 div1.addEventListener('click', function(e){
     console.log('div-1 red');
-})
+}, true)
 
 div2.addEventListener('click', function(e){
     console.log('div-2 yellow');
-})
+}, true)
 
 div3.addEventListener('click', function(e){
     console.log('div-3 blue');
-})
+}, true)
