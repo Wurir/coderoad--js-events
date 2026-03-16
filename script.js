@@ -1,16 +1,25 @@
-const inputChecked = document.querySelector('.input-checked')
-const inputEl = document.querySelector('input')
-const selectValue = document.querySelector('.select-value')
-const selectEl = document.querySelector('select')
+const inputList = document.querySelectorAll('input')
+const h1El = document.querySelector('h1')
 
-inputChecked.innerText = inputEl.checked
-selectValue.innerText = selectEl.value
+let radioValue = null
 
-inputEl.addEventListener('change', function(e){
-    console.log(e.target.checked)
-    inputChecked.innerText = e.target.checked
-})
 
-selectEl.addEventListener('change', function(e){
-    selectValue.innerText = e.target.value
-})
+function eventHandler(e){
+    radioValue = e.target.value
+    displayValueInHeader()
+}
+
+function displayValueInHeader(){
+    h1El.innerText = radioValue
+}
+
+for(let i=0; i<inputList.length; i++){
+    const input = inputList[i]
+
+    if(input.checked){
+        radioValue = input.value
+        displayValueInHeader()
+    }
+
+    input.addEventListener('change', eventHandler)
+}
