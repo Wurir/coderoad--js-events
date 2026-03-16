@@ -1,25 +1,11 @@
-const inputList = document.querySelectorAll('input')
-const h1El = document.querySelector('h1')
-
-let radioValue = null
+const keydownHeader = document.querySelector('.keydown')
+const keyupHeader = document.querySelector('.keyup')
 
 
-function eventHandler(e){
-    radioValue = e.target.value
-    displayValueInHeader()
-}
+window.addEventListener('keydown', function(e){
+    keydownHeader.innerText = e.key
+})
 
-function displayValueInHeader(){
-    h1El.innerText = radioValue
-}
-
-for(let i=0; i<inputList.length; i++){
-    const input = inputList[i]
-
-    if(input.checked){
-        radioValue = input.value
-        displayValueInHeader()
-    }
-
-    input.addEventListener('change', eventHandler)
-}
+window.addEventListener('keyup', function(e){
+    keyupHeader.innerText = e.key
+})
