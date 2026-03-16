@@ -1,16 +1,5 @@
-const div1 = document.querySelector('.div-1')
-const div2 = document.querySelector('.div-2')
-const div3 = document.querySelector('.div-3')
+const btnEl = document.querySelector('.contact-form__submit-button')
 
-div1.addEventListener('click', function(e){
-    console.log('div-1 red');
-})
-
-div2.addEventListener('click', function(e){
-    e.stopPropagation()
-    console.log('div-2 yellow');
-})
-
-div3.addEventListener('click', function(e){
-    console.log('div-3 blue');
+btnEl.addEventListener('click', function(e){
+    e.preventDefault() // nie przeladowuje strony, zapobiega domyslnemu zachowaniu
 })
