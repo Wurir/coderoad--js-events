@@ -6,10 +6,10 @@ const task = [
     }
 ]
 
-localStorage.setItem('names', namesArr)
+localStorage.setItem('names', JSON.stringify(namesArr)) // zapisuje tablice w formie stringa
 localStorage.setItem('name', 'Mateusz')
 localStorage.setItem('number', 123)
-localStorage.setItem('task', task)
+localStorage.setItem('task', JSON.stringify(task))
 
 const name = localStorage.getItem('name')
 const number = Number(localStorage.getItem('number'))
