@@ -13,8 +13,8 @@ localStorage.setItem('task', JSON.stringify(task))
 
 const name = localStorage.getItem('name')
 const number = Number(localStorage.getItem('number'))
-const names = localStorage.getItem('names')
-const tasks = localStorage.getItem('task')
+const names = JSON.parse(localStorage.getItem('names'))
+const tasks = JSON.parse(localStorage.getItem('task'))
 
 
 console.log(name, number, names, tasks)
